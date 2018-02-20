@@ -1,0 +1,870 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(9,6,36,.80);
+    font-family: 'Open Sans', sans-serif;
+    color: #cccaea;
+    overflow: auto;
+    text-align: center;
+  }
+  
+  main {
+    /* IE11 doesn't know that `main` HTML element is a block element. */
+    display: block;
+  }
+  
+  strong {
+    color: #fff;
+  }
+  
+  h1 {
+    margin: 0 0 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+  }
+  
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  
+  a {
+    color: #cccaea;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  .invisible {
+    opacity: 0;
+  }
+  
+  .fade {
+    transition: opacity 250ms ease-in;
+  }
+  
+  .gutter {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
+  .table {
+    width: 100%;
+    height: 100%;
+    display: table;
+  }
+  
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .modal {
+    margin: 0 auto;
+    display: table;
+    border-radius: 0.5rem;
+    background-color: #0d0a24;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, .4);
+  }
+  
+  .modal, #form {
+    width: 532px;
+  }
+  
+  .modal > main {
+    position: relative;
+    padding: 2rem 2rem 0.5rem;
+  }
+  
+  .modal #close {
+    position: absolute;
+    right: 0.8rem;
+    top: 0.8rem;
+  }
+  
+  .modal #close:hover {
+    cursor: pointer;
+  }
+  
+  .modal #close img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  
+  .modal #loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  
+  .modal #loading img {
+    max-width: 4rem;
+  }
+  
+  .modal #logos {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .modal #logos img {
+    width: 60px;
+    height: 60px;
+    margin: 0 0.5rem;
+  }
+  
+  .modal #content,
+  .modal #countdown {
+    margin-bottom: 1.6rem;
+  }
+  
+  .modal #countdown {
+    display: none;
+  }
+  
+  /*body.countdown .modal #countdown {
+    display: flex;
+  }*/
+  
+  .modal #countdown figure {
+    margin: 0 0.5rem;
+    flex: 8;
+  }
+  
+  .modal #countdown .separator {
+    color: #cccaea;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    flex: 1;
+  }
+  
+  .modal #countdown figure > div {
+    background: #1f1c35;
+    border-radius: 0.2rem;
+    font-size: 2rem;
+  }
+  
+  .modal #countdown figure figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+  }
+  
+  .modal form {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .modal form ::placeholder {
+    color: #9399c7;
+    opacity: 1;
+  }
+  
+  .modal form .flex {
+    max-width: 50%;
+    flex: 1 50%;
+  }
+  
+  .modal input,
+  .modal textarea,
+  .modal button {
+    min-width: 9%;
+    margin: 0 0 0.5rem 0;
+    padding: 0.6rem;
+    color: #0d0a24;
+    background-color: #fff;
+    border: none;
+    border-radius: 0.2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    // letter-spacing: 0.1rem;
+    flex: 1 0 40%;
+  }
+  .modal textarea {
+    padding-bottom: 0px;
+  }
+  
+  .modal input[type="submit"],
+  .modal button {
+    flex: 1 100%;
+    margin-bottom: 0;
+    padding: 1rem;
+    background-color: #49c7ae;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    appearance: none;
+  }
+  
+  .modal input[type="submit"]:hover,
+  .modal button:hover {
+    cursor: pointer;
+  }
+  
+  .modal input[type="submit"] img,
+  .modal button img {
+    max-width: 1.4rem;
+    max-height: 1.4rem;
+    vertical-align: bottom;
+  }
+  
+  .modal input[type="checkbox"] {
+    min-width: 0;
+    margin: 0 0.5rem 0 0;
+  }
+  
+  .modal input[name="member[first_name]"],
+  .modal input[name="member[email]"] {
+    flex: 1 0 43%;
+  }
+  
+  .modal input[name="member[first_name]"] {
+    margin-right: 0.25rem;
+  }
+  
+  .modal input[name="member[email]"] {
+    margin-left: 0.25rem;
+  }
+  
+  .modal input[name="member[street_address]"] {
+    margin-right: 0.5rem;
+    flex: 3;
+  }
+  
+  .modal input[name="member[postcode]"] {
+    margin-right: 0.25rem;
+    flex: 2;
+  }
+  
+  .modal input[name="member[phone_number]"] {
+    margin-left: 0.25rem;
+  }
+  
+  .modal input[name="userPhone"] {
+    margin-right: 0.5rem;
+    flex: 3;
+  }
+  
+  .modal textarea {
+    flex: 1 100%;
+  }
+  
+  .modal input[type="submit"] {
+    flex: 1 100%;
+    margin-bottom: 0;
+    padding: 1rem;
+    background-color: #49c7ae;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    -webkit-appearance: none;
+  }
+  
+  
+  .modal .disclaimer {
+    width: 100%;
+    margin: 0.5rem 0;
+    color: #717093;
+    font-size: 0.8rem;
+  }
+  
+  .modal .disclaimer p {
+    margin: 0.5rem 0;
+  }
+  
+  .modal .disclaimer a {
+    color: #b1afda;
+  }
+  
+  .modal .disclaimer a.subtle {
+    color: initial;
+  }
+  
+  .modal .disclaimer .github {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 0.2rem;
+    padding-bottom: 0.2rem;
+    vertical-align: middle;
+  }
+  
+  .modal #prompt .footer-links {
+    display: none;
+  }
+  
+  .modal footer {
+    padding: 1rem 2rem;
+    background-color: #141037;
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  
+  .modal footer h3 {
+    margin: 0 0 1rem;
+    color: #908dc4;
+    text-align: left;
+  }
+  
+  .modal footer ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: space-between;
+    list-style-type: none;
+  }
+  
+  .modal footer li {
+    margin: 0 0.25rem 0.5rem;
+    flex: 1 0 auto;
+  }
+  
+  .modal footer button {
+    width: 100%;
+    height: 2rem;
+    padding: 0 0.6rem;
+    background: transparent;
+    border: none;
+    border-radius: 0.2rem;
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 2rem;
+  }
+  
+  .modal footer button div {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal footer button:hover {
+    cursor: pointer;
+  }
+  
+  .modal footer button img {
+    max-width: 1rem;
+    max-height: 1rem;
+    margin-right: 0.5rem;
+  }
+  
+  .modal footer button a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .modal footer button.facebook {
+    background-color: #2b48a7;
+    border: none;
+  }
+  
+  .modal footer button.twitter {
+    background-color: #2c8be4;
+    border: none;
+  }
+  
+  /* Variations */
+  body.fullscreen {
+    background-color: #1e1b33;
+    opacity: 0.89;
+  }
+  
+  body.fullscreen .modal {
+    position: unset;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  body.countdown #logos {
+    display: none;
+  }
+  
+  body.countdown h1 {
+    color: #fd4935;
+    font-size: 36px;
+  }
+  
+  body.money h1 {
+    color: #ffc11a;
+  }
+  
+  body.stop h1 {
+    color: #ff3232;
+  }
+  
+  body.slow h1,
+  body.without h1 {
+    color: #279cff;
+  }
+  
+  @supports((-webkit-background-clip: text) and (-webkit-text-fill-color: transparent)) {
+    body.countdown h1 {
+      background: linear-gradient(#fd4935, #fd6d5a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  
+    body.slow h1,
+    body.without h1 {
+      background: linear-gradient(#39ebfd, #6b74fb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  
+  body.countdown .modal #content a {
+    color: #fd6d5a;
+  }
+  
+  body.countdown .modal input[type="submit"],
+  body.countdown .modal button {
+    background-color: #fd4935;
+    border: none;
+  }
+  
+  body.money .modal #content a {
+    color: #dea50a;
+  }
+  
+  body.money .modal input[type="submit"],
+  body.money .modal button {
+    background-color: #dea50a;
+    border: none;
+  }
+  
+  body.stop .modal #content a {
+    color: #ff3232;
+  }
+  
+  body.stop .modal input[type="submit"],
+  body.stop .modal button {
+    background-color: #ff3232;
+    border: none;
+  }
+  
+  body.slow .modal #content a,
+  body.without .modal #content a {
+    color: #6679fc;
+  }
+  
+  body.slow .modal input[type="submit"],
+  body.slow .modal button,
+  body.without .modal input[type="submit"],
+  body.without .modal button {
+    background-color: #6679fc;
+    border: none;
+  }
+  
+  body.glitch .modal {
+    background-color: red;
+  }
+  
+  body.glitch .modal #logos img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+  }
+  
+  body.glitch {
+    color: white;
+  }
+  
+  body.glitch a {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  body.glitch .modal input, body.glitch .modal textarea {
+    color: white;
+    background-color: red;
+    border: 1px solid white;
+    font-weight: bold;
+  }
+  
+  body.glitch input::placeholder {
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  body.glitch .modal button,
+  body.glitch .modal input[type="submit"] {
+    background-color: white;
+    color: red;
+    font-size: 1.6rem;
+  }
+  
+  body.glitch .modal button img {
+    display: none;
+  }
+  
+  body.glitch .modal .disclaimer,
+  body.glitch .modal .disclaimer a {
+    color: white;
+  }
+  
+  body.glitch .modal footer button a {
+    color: red;
+  }
+  
+  body.glitch footer h3 { color: rgba(255, 255, 255, .66); }
+  body.glitch footer { background: rgba(0, 0, 0, .33); }
+  
+  /* One More Vote Theme */
+  
+  body.onemorevote .modal {
+    background-color: #171b24;
+    border-radius: 4px;
+  }
+  
+  body.onemorevote .modal > main {
+    padding: 0;
+  }
+  
+  body.onemorevote section {
+    padding: 2rem 2rem .5rem;
+  }
+  
+  body.onemorevote a#close {
+    top: 0;
+  }
+  
+  body.onemorevote a#close:hover {
+    text-decoration: none;
+  }
+  
+  body.onemorevote a#close img {
+    display: none;
+  }
+  
+  body.onemorevote a#close::before {
+    content:"\00d7";
+    text-decoration: none;
+    color: #cad7ee;
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body.onemorevote-capitol #logos {
+    margin: -2rem -2rem 0.5rem;
+  }
+  
+  body.onemorevote-text #logos {
+    margin-top: 1rem;
+  }
+  
+  body.onemorevote #logos img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  
+  body.onemorevote-text #logos img {
+    max-width: 380px;
+  }
+  
+  body.onemorevote input[type="submit"] {
+    color: #13161c;
+    background-color: #f6ec40;
+  }
+  
+  body.onemorevote .disclaimer p#rotation {
+    margin-bottom: 40px;
+  }
+  
+  body.onemorevote .footer-links {
+    color: #1d222d;
+    background-color: #13161e;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 12px;
+    border-radius: 0 0 4px 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  
+  body.onemorevote .footer-links a {
+    color: #3f495d;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  body.onemorevote .footer-links img.github {
+    display: none;
+  }
+  
+  body.onemorevote-capitol #progress-bar {
+    height: 20px;
+  }
+  
+  body.onemorevote .progress-bar {
+    white-space: nowrap;
+  }
+  
+  body.onemorevote .progress-bar .bar {
+    display: inline-block;
+    height: 20px;
+    width: 6px;
+    background-color: #f7ea54;
+    border-radius: 3px;
+    margin: 0 2px;
+  }
+  
+  body.onemorevote .progress-bar .bar.active {
+    background-color: #a1afc8;
+  }
+  
+  body.onemorevote .progress-bar.done .bar:last-child {
+    animation: progress-bar-done 1.5s infinite;
+  }
+  
+  body.onemorevote #prompt h1 {
+    /* background-image: url(../images/one-more-vote-thanks.png); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 366px;
+    height: 28px;
+    margin: 20px auto;
+  }
+  
+  body.onemorevote #prompt h1 span {
+    display: none;
+  }
+  
+  body.onemorevote #prompt input[name="userPhone"],
+  body.onemorevote #prompt input[type="submit"] {
+    width: 50%;
+    flex: 1;
+    height: 3em;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1em;
+  }
+  
+  body.onemorevote #prompt .disclaimer a.privacy-policy {
+    display: none;
+  }
+  
+  body.onemorevote #prompt .footer-links {
+    display: block;
+  }
+  
+  body.onemorevote #script h1 {
+    /* background-image: url(../images/one-more-vote-calling-now.png); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 222.5px;
+    height: 25.5px;
+    margin: 20px auto;
+  }
+  
+  body.onemorevote #script h1 span {
+    display: none;
+  }
+  
+  body.onemorevote #script .polite {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  body.onemorevote #script .polite .quote {
+    display: block;
+    color: #a2b0ca;
+    font-weight: normal;
+    font-style: italic;
+    margin: 10px;
+  }
+  
+  body.onemorevote #script .busy {
+    background-color: #212733;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 8px;
+    /* background-image: url(../images/warning-icon.png); */
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: 5px center;
+    padding-left: 26px;
+  }
+  
+  body.onemorevote #footer {
+    background-color: #0f1219;
+  }
+  
+  body.onemorevote #footer h3 {
+    text-align: center;
+    color: #94a3c3;
+  }
+  
+  body.onemorevote #footer button {
+    background-color: #2d3444;
+    background-size: 15px 15px;
+    background-color: #2d3444;
+    background-size: auto 15px;
+    color: #94a3c3;
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    padding-left: 22px;
+  }
+  
+  body.onemorevote #footer button img {
+    display: none;
+  }
+  
+  body.onemorevote #footer button.facebook {
+    /* background-image: url(../images/facebook-circle-icon.png); */
+  }
+  
+  body.onemorevote #footer button.twitter {
+    /* background-image: url(../images/twitter-circle-icon.png); */
+  }
+  
+  body.onemorevote #footer .donate button {
+    /* background-image: url(../images/donate-icon.png); */
+  }
+  
+  body.onemorevote #footer button.ooni {
+    /* background-image: url(../images/phone-icon.png); */
+  }
+  
+  /* Animations */
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes modal {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes progress-bar-done {
+    from { 
+      background-color: #f7ea54;
+      box-shadow: 0px 0px 8px 2px rgba(246, 236, 64, 0.5); 
+    }
+    to {
+      background-color: #a1afc8;
+      box-shadow: none;
+    }
+  }
+  
+  .modal {
+    animation-duration: 1s;
+    animation-name: modal;
+    animation-timing-function: ease-out;
+  }
+  
+  /* Disable animations if user prefers */
+  @media (prefers-reduced-motion: reduce) {
+    body, .modal, body.slow #logos img {
+      animation-name: fade-in;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 674px) {
+    .gutter {
+      width: initial;
+      max-width: 100%;
+    }
+  
+    .modal { 
+      width: initial;
+      max-width: 100%;
+    }
+  
+    .modal form .flex {
+      max-width: 100%;
+      flex: 0 0 100%;
+    }
+  
+    .modal input[name="member[first_name]"],
+    .modal input[name="member[email]"] {
+      flex: 1 36%;
+    }
+  
+    .modal input[name="member[postcode]"] {
+      margin-right: 0;
+    }
+  
+    .modal input[name="member[phone_number]"] {
+      flex: 1 80%;
+      margin-left: 0;
+    }
+  
+    .progress-bar {
+      zoom: 0.6;
+      white-space: normal;
+    }
+  }
+  
+  @media (min-width: 530px) {
+    .modal footer li:first-child {
+      margin-left: 0;
+    }
+  
+    .modal footer li:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .modal input[name="userPhone"] {
+      min-width: 90%;
+      margin: 0 0 0.5rem 0;
+    }
+    .modal .prompt input[type="submit"],
+    .modal .prompt button {
+      max-width: 100%;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .modal input[name="member[first_name]"],
+    .modal input[name="member[email]"] {
+      flex: 1 33%;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .progress-bar {
+      zoom: 0.5;
+    }
+  }

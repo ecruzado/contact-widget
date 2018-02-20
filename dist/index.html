@@ -1,0 +1,91 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<link href='css/custom.css' rel='stylesheet' type='text/css'>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <form role="form" id="safetyauth_widget_contactForm" class="contact-form" data-toggle="validator" novalidate="true">
+                <div class="messages"></div>
+
+                <div class="controls">
+                    <label for="form_message">Información Personal</label>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input id="safetyauth_widget_name" type="text" name="safetyauth_widget_name" class="form-control" placeholder="Nombre" required="required" data-error="Por favor ingrese nombre.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input id="safetyauth_widget_last_name" type="text" name="safetyauth_widget_last_name" class="form-control" placeholder="Apellido" required="required" data-error="Por favor ingrese apellido.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="email" class="email form-control" id="safetyauth_widget_email" name="safetyauth_widget_email" placeholder="Email" required="required" data-error="Por favor ingrese email">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select class="form-control" id="safetyauth_widget_country_code">
+                                    <option>+51</option>
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <input type="number" class="phone form-control" id="safetyauth_widget_phone" name="safetyauth_widget_phone" placeholder="Celular" required="" data-error="Por favor ingrese su número celular">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" id="safetyauth_widget_msg_subject" name="safetyauth_widget_msg_subject" class="form-control" placeholder="Título" required="" data-error="Por favor ingrese título">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <textarea id="safetyauth_widget_message" name="safetyauth_widget_message" rows="7" placeholder="Mensaje" class="form-control" required="" data-error="Por favor ingrese su mensaje"></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="form_message">Preferencias</label>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="safetyauth_widget_copia_a_correo">
+                                <label class="form-check-label" for="safetyauth_widget_copia_a_correo">Enviarme una copia a mi correo</label>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input id="safetyauth_widget_submitContactUs" type="submit" class="btn btn-success btn-send" value="Enviar">
+                        </div>
+                    </div>
+                    <div id="safetyauth_widget_msgSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script><script type="text/javascript" src="iframe.js"></script><script type="text/javascript" src="widget.js"></script>

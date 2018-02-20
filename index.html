@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <style>body,html,iframe{width:100%;height:100%;margin:0;overflow:hidden}</style>
+      <!-- BEGIN WIDGET EMBED CODE -->
+  <script type="text/javascript">
+    var _bftn_options = {
+      // This is used to override the widget iframe URL with something else
+      // Normally it would be on CDN somewhere, but we want it local for testing.
+      iframe_base_path: '../iframe',
+
+      // This shows debug stuff in the console for testing.
+      debug: true,
+
+      // Always show the widget? Useful for testing.
+      always_show_widget: true
+    };
+
+    var paramKeys = ['theme', 'org'];
+    var paramString = window.location.search.substring(1);
+    var params;
+    var paramKey;
+
+    // IE/Edge does not support `URLSearchParams`
+    if (typeof URLSearchParams === 'function') {
+      params = new URLSearchParams(paramString);
+
+      for (var i = 0; i < paramKeys.length; i++) {
+        paramKey = paramKeys[i];
+
+        if (!!params.get(paramKey)) {
+          _bftn_options[paramKey] = params.get(paramKey);
+        }
+      }
+    } else {
+      // IE11 and Edge do not support `URLSearchParams`
+      params = paramString.split('&');
+
+      for (var i = 0; i < params.length; i++) {
+        var paramSplit = params[i].split('=');
+        paramKey = paramSplit[0];
+
+        if (paramKeys.indexOf(paramKey) != -1) {
+          _bftn_options[paramKey] = paramSplit[1];
+        }
+      }
+    }
+  </script>
+    <script src="./src/widget.js"></script>
+  </head>
+<body>
+    <iframe class="background" src="https://www.fightforthefuture.org"></iframe>
+</body>
+</html>
